@@ -1,0 +1,89 @@
+Searching 49 files for "text-transform: uppercase"
+
+/Library/WebServer/Documents/HomePage/css/style.css:
+   64  		line-height: 1.75em;
+   65  		margin-bottom: 1em;
+   66: 		/*/* text-transform: uppercase; */ ;*/
+   67  	}
+   68  
+   ..
+  517  		text-align: center;
+  518  		text-decoration: none;
+  519: 		/* text-transform: uppercase; */ ;
+  520  	}
+  521  
+  ...
+  641  			position: absolute;
+  642  			right: 1.5em;
+  643: 			/* text-transform: uppercase; */ ;
+  644  			top: 0.75em;
+  645  		}
+  ...
+  737  		min-width: 13em;
+  738  		padding: 1em 0;
+  739: 		/* text-transform: uppercase; */ ;
+  740  		margin-top: calc(-1em + 1px);
+  741  	}
+  ...
+  838  					padding-left: 0.05em;
+  839  					position: relative;
+  840: 					/* text-transform: uppercase; */ ;
+  841  				}
+  842  
+  ...
+  844  				letter-spacing: 0.1em;
+  845  				margin: 0;
+  846: 				/* text-transform: uppercase; */ ;
+  847  			}
+  848  
+  ...
+ 1031  		font-size: 0.8em;
+ 1032  		letter-spacing: 0.075em;
+ 1033: 		/* text-transform: uppercase; */ ;
+ 1034  	}
+ 1035  
+
+/Library/WebServer/Documents/HomePage/sass/style.scss:
+   58  		line-height: 1.75em;
+   59  		margin-bottom: 1em;
+   60: 		text-transform: uppercase;
+   61  		
+   62  		a {
+   ..
+  501  		text-align: center;
+  502  		text-decoration: none;
+  503: 		text-transform: uppercase;
+  504  
+  505  		&:hover {
+  ...
+  612  			position: absolute;
+  613  			right: 1.5em;
+  614: 			text-transform: uppercase;
+  615  			top: 0.75em;
+  616  			
+  ...
+  708  		min-width: 13em;
+  709  		padding: 1em 0;
+  710: 		text-transform: uppercase;
+  711  		margin-top: calc(-1em + 1px);
+  712  
+  ...
+  797  					padding-left: 0.05em;
+  798  					position: relative;
+  799: 					text-transform: uppercase;
+  800  				}
+  801  			}
+  ...
+  804  				letter-spacing: 0.1em;
+  805  				margin: 0;
+  806: 				text-transform: uppercase;
+  807  				
+  808  				a {
+  ...
+  983  		font-size: 0.8em;
+  984  		letter-spacing: 0.075em;
+  985: 		text-transform: uppercase;
+  986  
+  987  		nav {
+
+14 matches across 2 files
