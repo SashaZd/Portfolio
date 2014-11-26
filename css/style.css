@@ -10,7 +10,7 @@
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #07072B; /*#07072B;*/
 	}
 
 	body.is-loading * {
@@ -58,7 +58,7 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6, h7 {
 		color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -79,6 +79,14 @@
 		font-weight: 400;
 	}
 
+	h5 {
+		font-size: 1.5em;
+		letter-spacing: 0.1em;
+		color: white;
+		font-weight: 400;
+		text-align: center;
+	}
+
 	h3 {
 		font-size: 1.15em;
 		letter-spacing: 0.025em;
@@ -87,10 +95,18 @@
 		font-weight: 400;
 	}
 
+	h6 {
+		font-size: 1.15em;
+		letter-spacing: 0.025em;
+		text-align: left;
+		color: white;
+		font-weight: 400;
+	}
+
 	h4 {
 		font-size: 0.85em;
 		letter-spacing: 0.1em;
-
+		text-align: justify;
 	}
 
 	sup {
@@ -114,7 +130,8 @@
 /* Section/Article */
 
 	section.special, article.special {
-		text-align: center;
+		text-align: justify;
+		color: white;
 	}
 
 	header.major {
