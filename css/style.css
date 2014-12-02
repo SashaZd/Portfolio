@@ -131,7 +131,8 @@
 
 	section.special, article.special {
 		text-align: justify;
-		color: white;
+		color: white;s
+		opacity: 0.8;
 	}
 
 	header.major {
