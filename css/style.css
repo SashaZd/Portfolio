@@ -642,12 +642,14 @@
 		.wrapper.style3 {
 			background: white;
 			color: inherit;
+			opacity: 0.9;
 		}
 
 		.wrapper.style4 {
 			background: white;
 			color: inherit;
 			padding: 4em;
+			opacity: 0.95;
 		}
 
 /* Header */
@@ -1153,3 +1155,18 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+/* For the Individual Projects */
+
+	.bullets {
+		display: list-item;
+		margin-left: 40px;
+	}
+
+	p + .bullets { 
+		margin-top: -30px;
+	}
+
+
+
+
