@@ -43,7 +43,8 @@
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		color: #3fb1a3;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		
+		/*border-bottom: dotted 1px;*/
 	}
 
 		a:hover {
@@ -107,6 +108,7 @@
 		font-size: 0.85em;
 		letter-spacing: 0.1em;
 		text-align: justify;
+		color: #707093;
 	}
 
 	sup {
@@ -131,7 +133,7 @@
 
 	section.special, article.special {
 		text-align: justify;
-		color: white;s
+		color: white;
 		opacity: 0.8;
 	}
 
@@ -298,6 +300,13 @@
 			.image.featured img {
 				display: block;
 				width: 100%;
+			}
+
+			a .arrowLink {
+				display: block;
+				text-decoration: none !important;
+				border-bottom: none !important;
+				border: none;
 			}
 
 /* Icon */
@@ -642,7 +651,7 @@
 		.wrapper.style3 {
 			background: white;
 			color: inherit;
-			opacity: 0.9;
+			opacity: 0.95;
 		}
 
 		.wrapper.style4 {
