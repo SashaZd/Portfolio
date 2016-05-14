@@ -21,27 +21,49 @@
 // ** Heroku Postgres settings - from Heroku Environment ** //
 $db = parse_url($_ENV["DATABASE_URL"]);
 if($_SERVER["SERVER_NAME"]==="localhost") {
-	define('DB_NAME','finpipe_dev_db');
-	/** MySQL database username */
-	define('DB_USER','SashaZd');
-	/** MySQL database password */
-	define('DB_PASSWORD','pepelepew');
-	/** MySQL hostname */
-	define('DB_HOST','localhost');
-} else {
-	// ** Heroku Postgres settings - from Heroku Environment ** //
+	// define('DB_NAME','finpipe_dev_db');
+	// /** MySQL database username */
+	// define('DB_USER','SashaZd');
+	// * MySQL database password 
+	// define('DB_PASSWORD','pepelepew');
+	// /** MySQL hostname */
+	// define('DB_HOST','localhost');
+
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME',trim($db["path"],"/"));
+	define('DB_NAME', 'wp_sashazd');
 	/** MySQL database username */
-	define('DB_USER',$db["user"]);
+	define('DB_USER', 'admin');
 	/** MySQL database password */
-	define('DB_PASSWORD',$db["pass"]);
+	define('DB_PASSWORD', 'admin');
 	/** MySQL hostname */
-	define('DB_HOST',$db["host"]);
+	define('DB_HOST', 'localhost');
+
+} else {
+
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'heroku_5596d02fb54e5a6');
+	/** MySQL database username */
+	define('DB_USER', 'bba04c82f38052');
+	/** MySQL database password */
+	define('DB_PASSWORD', '479832ea');
+	/** MySQL hostname */
+	define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
+
+	// // ** Heroku Postgres settings - from Heroku Environment ** //
+	// // ** MySQL settings - You can get this info from your web host ** //
+	// /** The name of the database for WordPress */
+	// define('DB_NAME',trim($db["path"],"/"));
+	// /** MySQL database username */
+	// define('DB_USER',$db["user"]);
+	// /** MySQL database password */
+	// define('DB_PASSWORD',$db["pass"]);
+	// /** MySQL hostname */
+	// define('DB_HOST',$db["host"]);
 }
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET','utf8');
+define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE','');
 
