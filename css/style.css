@@ -1,5 +1,5 @@
 @import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
 /*
 	Twenty by HTML5 UP
@@ -26,9 +26,12 @@
 		transition: none !important;
 	}
 
-	body, input, select, textarea {
-		color: #7c8081;
-		font-family: 'Lato', sans-serif;
+	body, input, select, textarea, a, h1, h2 {
+		/*color: #7c8081;*/
+		/*color: white;*/
+		color: #33366A;
+		opacity: 0.9;
+		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
@@ -76,7 +79,8 @@
 	h2 {
 		font-size: 1.5em;
 		letter-spacing: 0.1em;
-		color: #33366A;
+		color: #33366A !important;
+		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
 	}
 
@@ -134,7 +138,7 @@
 	section.special, article.special {
 		text-align: justify;
 		color: white;
-		opacity: 0.8;
+		/*opacity: 0.8;*/
 	}
 
 	header.major {
@@ -272,7 +276,7 @@
 	}
 
 		.image:before {
-			background: url("images/overlay.png");
+			/*background: url("images/overlay.png");*/
 			content: '';
 			height: 100%;
 			left: 0;
@@ -504,6 +508,7 @@
 		ul.buttons.vertical li {
 			display: block;
 			color: #33366A;
+			/*color: white;*/
 			padding: 1.5em 0 0 0;
 		}
 
@@ -859,12 +864,14 @@
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #FFFFFF; /* */
+		/*background-color: #FFFFFF; /* */*/
+		background-color: #07072B;
 		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("../images/banner.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
-		color: white;
+		/*color: white;*/
+		color: #33366A;
 		cursor: default;
 		padding: 6em 0;
 		text-align: center;
@@ -883,6 +890,7 @@
 			animation-fill-mode: forwards;
 			background: rgba(255,255,255,0.8);  
 			color: #33366A;
+			/*color: white !important;*/
 			font-weight: 400;
 			display: inline-block;
 			opacity: 0;				/* starting the banner of as invisible for the smooth fade in */
@@ -929,7 +937,7 @@
 /* Main */
 
 	#Projects {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+		/*background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");*/
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
@@ -960,7 +968,8 @@
 
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
+		/*background-color: #645862;*/
+		/*background: #07072B;*/
 		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("../images/banner.jpg");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
