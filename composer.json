@@ -9,7 +9,8 @@
         { "type": "composer", "url": "https://wpackagist.org" }
     ],
     "require": {
-        "johnpbloch/wordpress": "4.1",
+		"php": ">=5.3",
+		"johnpbloch/wordpress": "4.1",
         "johnpbloch/wordpress-core-installer": "~0.1",
         "composer/installers": "dev-master",
         "wpackagist-plugin/akismet": "~3.0.4",
