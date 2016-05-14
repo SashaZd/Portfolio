@@ -1,21 +1,5 @@
 {
-    "name": "SashaZd",
-    "description": "My Portfolio",
-    "version": "1.0.0",
-    "type": "root",
-    "keywords": [],
-    "homepage": "http://sashazd.me",
-    "repositories": [
-        { "type": "composer", "url": "https://wpackagist.org" }
-    ],
     "require": {
-		"php": ">=5.3",
-		"johnpbloch/wordpress": "4.1",
-        "johnpbloch/wordpress-core-installer": "~0.1",
-        "composer/installers": "dev-master",
-        "wpackagist-plugin/akismet": "~3.0.4",
-        "wpackagist-plugin/amazon-s3-and-cloudfront": "~0.8",
-        "wpackagist-plugin/amazon-web-services": "~0.2.1",
-        "wpackagist-plugin/postmark-approved-wordpress-plugin": "~1.6"
-    }
+		"php": ">=5.3"
+   }
 }
