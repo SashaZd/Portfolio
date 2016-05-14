@@ -17,19 +17,81 @@
  *
  * @package WordPress
  */
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wp_sashazd');
-/** MySQL database username */
-define('DB_USER', 'admin');
-/** MySQL database password */
-define('DB_PASSWORD', 'admin');
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+
+// ** Heroku Postgres settings - from Heroku Environment ** //
+$db = parse_url($_ENV["DATABASE_URL"]);
+if($_SERVER["SERVER_NAME"]==="localhost") {
+	// define('DB_NAME','finpipe_dev_db');
+	// /** MySQL database username */
+	// define('DB_USER','SashaZd');
+	// * MySQL database password 
+	// define('DB_PASSWORD','pepelepew');
+	// /** MySQL hostname */
+	// define('DB_HOST','localhost');
+
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'wp_sashazd');
+	/** MySQL database username */
+	define('DB_USER', 'admin');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'admin');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+
+
+	
+
+} else {
+
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'heroku_5596d02fb54e5a6');
+	/** MySQL database username */
+	define('DB_USER', 'bba04c82f38052');
+	/** MySQL database password */
+	define('DB_PASSWORD', '479832ea');
+	/** MySQL hostname */
+	define('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net');
+
+	// // ** Heroku Postgres settings - from Heroku Environment ** //
+	// // ** MySQL settings - You can get this info from your web host ** //
+	// /** The name of the database for WordPress */
+	// define('DB_NAME',trim($db["path"],"/"));
+	// /** MySQL database username */
+	// define('DB_USER',$db["user"]);
+	// /** MySQL database password */
+	// define('DB_PASSWORD',$db["pass"]);
+	// /** MySQL hostname */
+	// define('DB_HOST',$db["host"]);
+}
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+define('DB_COLLATE','');
+
+
+// ** MySQL settings - You can get this info from your web host ** //
+// $url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
+
+// /** The name of the database for WordPress */
+// define('DB_NAME', trim($url['path'], '/'));
+
+// /** MySQL database username */
+// define('DB_USER', $url['user']);
+
+// * MySQL database password 
+// define('DB_PASSWORD', $url['pass']);
+
+// /** MySQL hostname */
+// define('DB_HOST', $url['host']);
+
+// /** Database Charset to use in creating database tables. */
+// define('DB_CHARSET', 'utf8');
+
+// /** The Database Collate type. Don't change this if in doubt. */
+// define('DB_COLLATE', '');
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -39,6 +101,16 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
+// define('AUTH_KEY',         getenv('AUTH_KEY'));
+// define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
+// define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
+// define('NONCE_KEY',        getenv('NONCE_KEY'));
+// define('AUTH_SALT',        getenv('AUTH_SALT'));
+// define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+// define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
+// define('NONCE_SALT',       getenv('NONCE_SALT'));
+
+
 define('AUTH_KEY',         '4SDnZn[2sN|<gj7(4Vm{u:otE[V0x$!mCL8r;j~-CtTsaq%rh %teCqlY2J<r>61');
 define('SECURE_AUTH_KEY',  '8m[yX U+.aZG/Na$&S,nf_-#h93Bm!C }[Iq#?@Bk#V^X q}JocvbE`VTUW;/P|c');
 define('LOGGED_IN_KEY',    'Fy1O.3R$:H8/*ka3-7UIMJy#Io&1W}&9zipAI*DxcAsr:9s$0pM:^^cMh1Q(;1Qy');
@@ -47,14 +119,18 @@ define('AUTH_SALT',        'T8/}+d]UU]ILM:T(7n^Ch-g(?mJ+Ifc3o3mNV;Xr~ 7g+E!2HGG5
 define('SECURE_AUTH_SALT', 'D$)c#6AFj:I(E#5BxlbuFbXvM(rjIp||F2Yd- N6%aY9:Q~VNxuV9ZEIYdrodfRH');
 define('LOGGED_IN_SALT',   '3H.}wQ4J,ercKS,)eAr5dhTnqP$!iY}x;&jd#^&9-kYfsnx,Tz+HkG3p7$k(:#dC');
 define('NONCE_SALT',       'oy>sh|Z j.`!*&@!p$o;j2kw^A>Ta-l8|OH8fzD<zS*#!?`8[kYQo;Zb!Vw4^Fn[');
+
+
 /**#@-*/
+
 /**
  * WordPress Database Table prefix.
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_sashazd_';
+	$table_prefix  = 'wp_sashazd_';
+
 /**
  * For developers: WordPress debugging mode.
  *
@@ -68,9 +144,12 @@ $table_prefix  = 'wp_sashazd_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
 /* That's all, stop editing! Happy blogging. */
+
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
+
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
