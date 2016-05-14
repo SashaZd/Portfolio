@@ -18,26 +18,54 @@
  * @package WordPress
  */
 
-define('WP_MEMORY_LIMIT', '64M');
+// ** Heroku Postgres settings - from Heroku Environment ** //
+$db = parse_url($_ENV["DATABASE_URL"]);
+if($_SERVER["SERVER_NAME"]==="localhost") {
+	define('DB_NAME','finpipe_dev_db');
+	/** MySQL database username */
+	define('DB_USER','ilia');
+	/** MySQL database password */
+	define('DB_PASSWORD','ilia');
+	/** MySQL hostname */
+	define('DB_HOST','localhost');
+} else {
+	// ** Heroku Postgres settings - from Heroku Environment ** //
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME',trim($db["path"],"/"));
+	/** MySQL database username */
+	define('DB_USER',$db["user"]);
+	/** MySQL database password */
+	define('DB_PASSWORD',$db["pass"]);
+	/** MySQL hostname */
+	define('DB_HOST',$db["host"]);
+}
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET','utf8');
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE','');
+
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wp_sashazd');
+// $url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
 
-/** MySQL database username */
-define('DB_USER', 'admin');
+// /** The name of the database for WordPress */
+// define('DB_NAME', trim($url['path'], '/'));
 
-/** MySQL database password */
-define('DB_PASSWORD', 'admin');
+// /** MySQL database username */
+// define('DB_USER', $url['user']);
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+// * MySQL database password 
+// define('DB_PASSWORD', $url['pass']);
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+// /** MySQL hostname */
+// define('DB_HOST', $url['host']);
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+// /** Database Charset to use in creating database tables. */
+// define('DB_CHARSET', 'utf8');
+
+// /** The Database Collate type. Don't change this if in doubt. */
+// define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -48,14 +76,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'gv-GDF;x/j6-++Jqmqhe?O -3?O1anJ;9y1|,RkIpdkV6liKqV53&hko|caj4+)f');
-define('SECURE_AUTH_KEY',  'D3CBXiF-jt#*?8ine&<4m)yzCPAb,d22}s[6(*:VY{2J2vJ}_X)dZ)xU6a:sU,4T');
-define('LOGGED_IN_KEY',    'xW^,sSu5.28c7vHs?)+h/*>|h4urmPZOIR*F/h*e+B_!m?FjS|_}8;OSTro:C$7,');
-define('NONCE_KEY',        'Xy0@D7*2`))K mtluevC<kU$*LX@@)Fxy8WX@G6xXIDoAs>2~Y//OleI<Q5w^=hf');
-define('AUTH_SALT',        'Y$,}Tk-XekGWH/AB0XPm|A%%yy{h>.NMtKSyhEi(:Hu;W5b*bE:HRoP{b8U%NrEw');
-define('SECURE_AUTH_SALT', '<&HLX{?0TLgI$J`:2.HYs9;wsgm]5^dp9tb{&?(UgYdZYOdfA|,Ngw;lj!Vq*PUI');
-define('LOGGED_IN_SALT',   '6puq`sqg3J}6BQt=CB|}H9px8AZqdM6JTqK2f&qFguUCw^0F?J,=Cl+o@_X<pq)G');
-define('NONCE_SALT',       'C!0()-H#%%:i{<jD=v<I7OiHecw?]!4?C)XydqoW T: kHpP#CH]s||K 0$RTXC$');
+define('AUTH_KEY',         getenv('AUTH_KEY'));
+define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
+define('NONCE_KEY',        getenv('NONCE_KEY'));
+define('AUTH_SALT',        getenv('AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
+define('NONCE_SALT',       getenv('NONCE_SALT'));
 
 /**#@-*/
 
@@ -65,7 +93,7 @@ define('NONCE_SALT',       'C!0()-H#%%:i{<jD=v<I7OiHecw?]!4?C)XydqoW T: kHpP#CH]
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_sashazd_';
+$table_prefix  = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
