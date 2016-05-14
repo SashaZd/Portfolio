@@ -5,7 +5,6 @@
     "type": "root",
     "keywords": [],
     "homepage": "http://sashazd.me",
-    "minimum-stability": "dev",
     "repositories": [
         { "type": "composer", "url": "https://wpackagist.org" }
     ],
