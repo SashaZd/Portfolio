@@ -19,7 +19,7 @@
  */
 
 define('WP_HOME','http://sashazd.herokuapp.com/projects/');
-define('WP_SITEURL','http://sashazd.herokuapp.com/index.html');
+define('WP_SITEURL','http://sashazd.herokuapp.com/projects/');
 
 define('WP_MEMORY_LIMIT', '64M');
 
