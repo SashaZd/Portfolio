@@ -18,8 +18,8 @@
  * @package WordPress
  */
 
-define('WP_HOME','http://sashazd.herokuapp.com/projects/');
-define('WP_SITEURL','http://sashazd.herokuapp.com/projects/');
+define('WP_HOME','https://sashazd.herokuapp.com/projects/');
+define('WP_SITEURL','https://sashazd.herokuapp.com/projects/');
 
 define('WP_MEMORY_LIMIT', '64M');
 
