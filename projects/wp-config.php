@@ -18,9 +18,6 @@
  * @package WordPress
  */
 
-define('WP_HOME','http://sashazd.herokuapp.com/projects/');
-define('WP_SITEURL','http://sashazd.herokuapp.com/');
-
 define('WP_MEMORY_LIMIT', '64M');
 
 $db = parse_url($_ENV["DATABASE_URL"]);
@@ -44,6 +41,8 @@ if($_SERVER["SERVER_NAME"]==="localhost") {
 	define('DB_HOST', 'localhost');
 
 } else {
+	define('WP_HOME','http://sashazd.herokuapp.com/projects');
+	define('WP_SITEURL','http://sashazd.herokuapp.com/projects');
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
