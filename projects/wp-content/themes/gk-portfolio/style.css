@@ -715,6 +715,24 @@ img.wp-smiley,
 	color: #425382;
 }
 
+.site-title-right-menu {
+	font-weight: 400;
+	font-size: 14px;
+	min-width: 0;
+	width: auto;
+	float: right;
+	margin-top: -50px;
+	margin-right: 200px;
+	color: #425382;
+}
+
+.site-title-right-menu li {
+	list-style-type: none;
+	line-height: 1em;
+	float: right;
+	padding: 0.6em 0.75em;
+}
+
 .site-description {
 	color: #666;
 	font-size: 14px;

@@ -9,7 +9,7 @@
 	</div><!-- #page -->
 	<footer id="gk-footer" role="contenting">
 		<header>
-			<h2><font color="white">Contact Me</font></h2>
+			<h2 id="Contact"><font color="white">Contact Me</font></h2>
 		</header>
 		<ul class="nav-menu">
 			<li>
