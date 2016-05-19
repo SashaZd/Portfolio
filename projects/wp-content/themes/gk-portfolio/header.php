@@ -28,8 +28,8 @@
 					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 					<div class="site-title-right-menu"><ul>
 						<li><a href="#Contact">Contact</a></li>
-						<li><a href="../#Resume">Resumé</a></li>
-						<li><a href="">Projects</a></li>
+						<li><a href="http://sashazd.herokuapp.com/index.html#Resume">Resumé</a></li>
+						<li><a href="http://sashazd.herokuapp.com/projects/">Projects</a></li>
 					</ul></div>
 					<?php if(trim(get_bloginfo('description')) != '' || is_customize_preview()) : ?>
 					<h2 class="site-description"><?php bloginfo('description'); ?></h2>
