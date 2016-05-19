@@ -42,7 +42,7 @@ if($_SERVER["SERVER_NAME"]==="localhost") {
 
 } else {
 	define('WP_HOME','http://sashazd.herokuapp.com/projects');
-	define('WP_SITEURL','http://sashazd.herokuapp.com/index.html');
+	define('WP_SITEURL','http://sashazd.herokuapp.com');
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
