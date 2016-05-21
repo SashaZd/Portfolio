@@ -21,7 +21,7 @@
 	<div id="ie-toolbar"><div><?php _e('You\'re using an unsupported version of Internet Explorer. Please <a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home">upgrade your browser</a> for the best user experience on our site. Thank you.', 'portfolio') ?></div></div>
 	<![endif]-->
 		<header id="masthead" class="site-header" role="banner">
-			<a class="home-link" href="http://sashazd.herokuapp.com/index" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<a class="home-link" href="http://sashazd.herokuapp.com/index.html" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<?php if(get_theme_mod('portfolio_logo', '') !== '') : ?>
 					<img src="<?php echo get_theme_mod('portfolio_logo', ''); ?>" alt="<?php bloginfo( 'name' ); ?>" />
 				<?php else: ?>
