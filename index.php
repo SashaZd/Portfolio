@@ -1,3 +1,4 @@
+<?php include_once("index.html"); ?>
 <?php
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
@@ -15,4 +16,3 @@ define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );?>
-<?php include_once("index.html"); ?>
