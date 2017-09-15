@@ -1,1 +1,5 @@
 /vendor/
+/projects/*
+wp-config.php
+/projects/wp-content/uploads/*
+*.php
